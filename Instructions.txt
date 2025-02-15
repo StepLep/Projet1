@@ -1,0 +1,16 @@
+As you can see, I’ve already created a basic Next.js application. In the “projet3/app/page.tsx” file, I want you to create the following elements for me:
+
+a main screen with three attractive buttons:
+
+	- cash receipts” button 
+	- Disbursements” button
+	- Cash flow plan” button
+
+
+The “Inpayments” button takes you to a page where you can enter a date, a customer name and an amount before tax. 
+
+The “Disbursements” button takes you to a page where you can enter a date, a supplier name and an amount.
+
+The “Cash flow plan” button takes you to a page where you can enter a start and end date. Once the start and end dates have been entered, a calendar from the start date to the end date is displayed.
+
+First, I just need you to create the pages
