@@ -11,6 +11,12 @@ interface NutritionalValuesProps {
   isDarkMode: boolean;
 }
 
+interface NutrientData {
+  name: string;
+  value: number;
+  unit: string;
+}
+
 export function NutritionalValues({ selectedFood, weight, isDarkMode }: NutritionalValuesProps) {
   const nutritionData = [
     { name: 'Protéines', value: Number(calculateNutrition(selectedFood.nutritionalInfo.proteins, weight)) },
@@ -50,6 +56,13 @@ export function NutritionalValues({ selectedFood, weight, isDarkMode }: Nutritio
         {`${(percent * 100).toFixed(0)}%`}
       </text>
     ) : null;
+  };
+
+  const calculateNutrients = (data: NutrientData[], weight: number): NutrientData[] => {
+    return data.map((nutrient: NutrientData) => ({
+      ...nutrient,
+      value: (nutrient.value * weight) / 100
+    }));
   };
 
   return (

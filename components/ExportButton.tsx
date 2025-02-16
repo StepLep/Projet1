@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Food } from '@/data/foods';
 import { exportToCSV } from '@/utils/calculations';
 

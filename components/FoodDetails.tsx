@@ -2,7 +2,7 @@
 
 import { Food } from '@/data/foods';
 import { NutritionalValues } from './NutritionalValues';
-import { ExportButton } from './ExportButton';
+import Image from 'next/image';
 
 interface FoodDetailsProps {
   selectedFood: Food;
@@ -21,9 +21,11 @@ export function FoodDetails({
     <div className="space-y-6">
       <div className={`flex items-center gap-6 p-4 rounded-lg ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
         <div className={`w-32 h-32 rounded-lg overflow-hidden shadow-lg ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
-          <img
-            src={selectedFood.imageUrl}
+          <Image 
+            src={selectedFood.image} 
             alt={selectedFood.name}
+            width={300}
+            height={200}
             className="w-full h-full object-cover"
           />
         </div>
