@@ -33,7 +33,7 @@ export default function Home() {
         <div className="w-full flex justify-between items-center">
           <div className="flex items-center gap-4">
             <Image 
-              src={logoImage}
+              src={logoImage || null}
               alt="Logo Calculateur Nutritionnel"
               width={150}
               height={150}
